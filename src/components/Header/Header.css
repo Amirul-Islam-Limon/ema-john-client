@@ -17,3 +17,20 @@
 .header a:hover{
     color: orange;
 }
+.user-email{
+    color:orange;
+    padding-left: 10px;
+}
+.btn-log-out{
+    margin-left: 10px;
+    padding: 5px;
+    border: none;
+    font-size: 17px;
+    /* background-color: rgb(248, 131, 131); */
+    color: red;
+    cursor: pointer;
+    background-color: #1C2B35;
+}
+.login-signUp a{
+    color: rgb(12, 243, 12);
+}
