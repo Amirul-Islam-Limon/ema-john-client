@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './Orders.css'
 import { Link, useLoaderData } from 'react-router-dom';
 import { deleteShoppingCart, removeFromDb } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -9,7 +10,7 @@ const Orders = () => {
     const [cart, setCart] = useState(initialCart)
 
     const handleRemoveItem = (id) => {
-        const remaining = cart.filter(product => product.id !== id);
+        const remaining = cart.filter(product => product._id !== id);
         setCart(remaining);
         removeFromDb(id);
     }
@@ -33,7 +34,7 @@ const Orders = () => {
                     cart.length === 0 && <h2>No Items for Review. Please <Link to="/">Shop more</Link></h2>
                 }
             </div>
-            <div className='cart-container'>
+            <div className='cart-container orders-cart-container'>
                 <Cart clearCart={clearCart} cart={cart}>
                     <Link to="/shipping">
                         <button>Proceed Shipping</button>

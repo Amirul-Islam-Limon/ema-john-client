@@ -10,7 +10,42 @@
 }
 .cart-container{
     background-color: rgba(255, 153, 0, 0.3);
+    /* text-align: center; */
+    /* height: 100vh; */
 }
+.cart-container button{
+    cursor: pointer;
+    text-align: center;
+    background:orange;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 100%;
+}
+.cart-container button:hover{
+    border-radius: 8px;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.pagination button{
+    margin-right:12px ;
+    padding: 10px;
+    font-size: large;
+}
+.pagination button:hover{
+    cursor: pointer;
+}
+.pagination .selected{
+    background-color: goldenrod;
+    font-weight: bold;
+    color: white;
+    border: 1px solid green;
+}
+
 @media screen and (max-width:1100px) {
     .products-container{
         grid-template-columns: repeat(2, 1fr);
