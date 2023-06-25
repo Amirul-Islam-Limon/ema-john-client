@@ -16,7 +16,7 @@ const Shop = () => {
     const pages = Math.ceil(count / productDataSize);
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/?page=${currentPage}&size=${productDataSize}`
+        const url = `https://ema-john-server-hazel.vercel.app/products/?page=${currentPage}&size=${productDataSize}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -35,7 +35,7 @@ const Shop = () => {
         const savedCart = [];
         const ids = Object.keys(storedCart);
         console.log(ids);
-        fetch("http://localhost:5000/productsByIds", {
+        fetch("https://ema-john-server-hazel.vercel.app/productsByIds", {
             method: "POST",
             headers: {
                 "Content-Type":"Application/json"
